@@ -49,9 +49,10 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- Neo4j connection ---
-uri = "neo4j+s://30d3f41f.databases.neo4j.io"
-user = "neo4j"
-password = "CQizjjgwq3AAHS0pYMoVL_QY1_a3CAWs2gitNlQ0VFM"
+
+uri = os.getenv("NEO4J_URI")
+user = os.getenv("NEO4J_USERNAME")
+password = os.getenv("NEO4J_PASSWORD")
 driver = GraphDatabase.driver(uri, auth=(user, password))
 
 # --- Load embedding model ---
