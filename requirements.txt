@@ -1,0 +1,8 @@
+streamlit
+neo4j
+pandas
+numpy
+torch
+sentence-transformers
+scikit-learn
+fpdf
